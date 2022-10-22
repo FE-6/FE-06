@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Berita</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8"><h1>Tambah Berita</h1>
+          <form name="tambahberita" method="" action="">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Title</label>
+        <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="">
+        <label for="exampleFormControlInput1">Nama</label>
+        <input type="email" class="form-control" name="nama" id="exampleFormControlInput2" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Category</label>
+        <select class="form-control" name="kategori" id="exampleFormControlSelect1">
+          <option>Kesehatan</option>
+          <option>Ekonomi</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Content</label>
+        <textarea class="form-control mb-3" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <button type="button" onClick='inputdata()' class="btn btn-success">Simpan</button>
+<button type="reset" class="btn btn-warning">Batal</button>
+      </div>
+      <div class="row">
+        <table class="table" id="databel">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Category</th>
+              <th scope="col">Content</th>
+            </tr>
+          </thead>
+        </table>  
+      </div>
+    </form>
+        </div>          
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="tambah.js"></script>
+</body>
+</html>
