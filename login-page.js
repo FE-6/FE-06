@@ -1,7 +1,7 @@
 let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/'
 
-const emailElement = document.querySelector('#exampleInputEmail1')
-const passwordElement = document.querySelector('#exampleInputPassword1')
+const emailElement = document.querySelector('#exampleInputEmail')
+const passwordElement = document.querySelector('#exampleInputPassword')
 const headerElement = document.getElementById('notif')
 const buttonLogin = document.getElementById('button')
 
