@@ -1,7 +1,9 @@
 body {
     font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
     color: #404040;
+    
     background: #2218b2;
+    
     justify-content: center;
     margin-top: 200px;
   }
@@ -44,7 +46,9 @@ body {
     background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
     background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
     background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
-    -webkit-box-shadow: 0 1px whitesmoke;
+
+    -webkit-box-shadow: 0 1px rgb(0, 0, 0);
+
     box-shadow: 0 1px rgb(0, 0, 0);
   }
   
@@ -100,12 +104,14 @@ body {
   }
   
   :-moz-placeholder {
-    color: #c9c9c9 !important;
+    color: #000000 !important;
     font-size: 13px;
   }
   
   ::-webkit-input-placeholder {
-    color: rgb(0, 0, 0);
+
+    color:#000000;
+
     font-size: 13px;
   }
   
