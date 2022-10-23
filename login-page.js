@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/'
 
 const emailElement = document.querySelector('#exampleInputEmail')
@@ -6,6 +7,8 @@ const passwordElement = document.querySelector('#exampleInputPassword')
 const headerElement = document.getElementById('notif')
 const buttonLogin = document.getElementById('button')
 =======
+=======
+>>>>>>> 6831bdb4ee9c91e7001f237da83a8fbe56e3d2d5
 
 let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/api/fe6/login'
 
@@ -14,6 +17,9 @@ const passwordElement = document.querySelector('#exampleInputPassword1')
 const buttonLogin = document.getElementById('button')
 
 
+<<<<<<< HEAD
+>>>>>>> 6831bdb4ee9c91e7001f237da83a8fbe56e3d2d5
+=======
 >>>>>>> 6831bdb4ee9c91e7001f237da83a8fbe56e3d2d5
 
 let login = async (email, password) => {
