@@ -5,6 +5,7 @@ const passwordElement = document.querySelector('#exampleInputPassword')
 const headerElement = document.getElementById('notif')
 const buttonLogin = document.getElementById('button')
 
+
 let login = async (email, password) => {
     
     let response = await fetch(baseURL + 'login', {
@@ -23,7 +24,9 @@ let login = async (email, password) => {
             localStorage.setItem("id", user.id)
             localStorage.setItem("full_name", user.full_name)
             // headerElement.innerHTML = "Login Success"
-            window.location.href = "dashboard-page.html"
+
+            window.location.href = "tambahberita.html"
+
         } else {
             headerElement.innerHTML = "Wrong Password"
         }
