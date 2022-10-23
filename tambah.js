@@ -26,7 +26,7 @@ let postDataNews = async () => {
 
     const imageValue = imgbb['data'].display_url
 
-    await fetch(baseURL + 'articles', {
+    await fetch(baseURL + 'article', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
