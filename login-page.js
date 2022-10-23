@@ -1,26 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/'
-
-const emailElement = document.querySelector('#exampleInputEmail')
-const passwordElement = document.querySelector('#exampleInputPassword')
-const headerElement = document.getElementById('notif')
-const buttonLogin = document.getElementById('button')
-=======
-=======
->>>>>>> 6831bdb4ee9c91e7001f237da83a8fbe56e3d2d5
-
-let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/api/fe6/login'
 
 const emailElement = document.querySelector('#exampleInputEmail1')
 const passwordElement = document.querySelector('#exampleInputPassword1')
+const headerElement = document.getElementById('notif')
 const buttonLogin = document.getElementById('button')
-
-
-<<<<<<< HEAD
->>>>>>> 6831bdb4ee9c91e7001f237da83a8fbe56e3d2d5
-=======
->>>>>>> 6831bdb4ee9c91e7001f237da83a8fbe56e3d2d5
 
 let login = async (email, password) => {
     
@@ -40,9 +23,7 @@ let login = async (email, password) => {
             localStorage.setItem("id", user.id)
             localStorage.setItem("full_name", user.full_name)
             // headerElement.innerHTML = "Login Success"
-
-            window.location.href = "tambahberita.html"
-
+            window.location.href = "dashboard-page.html"
         } else {
             headerElement.innerHTML = "Wrong Password"
         }
