@@ -1,20 +1,54 @@
-localStorage.getItem('title', 'nama', 'kategori', 'content');
+const baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/api/fe6/home'
 
-function inputdata(){
-    var t=document.forms['tambahberita']['title'].value;
-    var n=document.forms['tambahberita']['nama'].value;
-    var k=document.forms['tambahberita']['kategori'].value;
-    var c=document.forms['tambahberita']['content'].value;        
-                                            
-    var tabel = document.getElementById("databel");
-    var baris = tabel.insertRow(1);
-    var kol1 = baris.insertCell(0);
-    var kol2 = baris.insertCell(1);
-    var kol3 = baris.insertCell(2);
-    var kol4 = baris.insertCell(3);
-            
-    kol1.innerHTML = t;
-    kol2.innerHTML = n;
-    kol3.innerHTML = k;
-    kol4.innerHTML = c;
-   }
+const imgbbKey = 'f510415e60d0b3b7c6bfb209f3e2cde7'
+const userId = localStorage.getItem('id')
+
+const titleElement = document.querySelector('#title')
+const contentElement = document.querySelector('#content')
+const imageElement = document.querySelector('#image')
+const adddButtonElement = document.getElementById('add-button')
+
+let now = new Date().toISOString()
+let formData = new FormData()
+
+// let now = new Date().toISOString().slice(0, 10) Output : yyyy-mm-dd
+
+let postDataNews = async () => {
+    formData.append("key", imgbbKey)
+    formData.append("image", imageElement.files[0])
+
+    let responseImgbb = await fetch("https://api.imgbb.com/1/upload", {
+        method: 'POST',
+        body: formData
+    })
+
+    let imgbb = await responseImgbb.json()
+
+    const imageValue = imgbb['data'].display_url
+
+    await fetch(baseURL + 'articles', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            title: titleElement.value,
+            content: contentElement.value,
+            image: imageValue,
+            createdAt: now,
+            userId: userId,
+        })
+    })
+
+    window.location.href = 'home.html'
+}
+
+adddButtonElement.addEventListener('click', (event) => {
+    event.preventDefault()
+
+    adddButtonElement.innerHTML = `
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    `
+
+    postDataNews()
+})
