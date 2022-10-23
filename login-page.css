@@ -1,7 +1,9 @@
 body {
     font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
     color: #404040;
-    background: #121a88;
+    
+    background: #2218b2;
+    
     justify-content: center;
     margin-top: 200px;
   }
@@ -13,8 +15,8 @@ body {
     width: 310px;
     background: white;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 200px rgba(31, 29, 159, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 200px rgba(31, 29, 159, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 200px rgba(28, 30, 166, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(28, 30, 166, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
   }
   
   .login:before {
@@ -36,7 +38,7 @@ body {
     font-weight: bold;
     color: rgb(0, 0, 0);
     text-align: center;
-    text-shadow: 0 1px white;
+    text-shadow: 0 1px rgb(0, 0, 0);
     background: #f3f3f3;
     border-bottom: 1px solid #000000;
     border-radius: 3px 3px 0 0;
@@ -44,7 +46,9 @@ body {
     background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
     background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
     background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+
     -webkit-box-shadow: 0 1px rgb(0, 0, 0);
+
     box-shadow: 0 1px rgb(0, 0, 0);
   }
   
@@ -105,7 +109,9 @@ body {
   }
   
   ::-webkit-input-placeholder {
+
     color:#000000;
+
     font-size: 13px;
   }
   
@@ -119,10 +125,10 @@ body {
     padding: 0 10px;
     width: 200px;
     height: 34px;
-    color: #404040;
+    color: #000000;
     background: white;
     border: 1px solid;
-    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-color: #000000 #000000 #000000;
     border-radius: 2px;
     outline: 5px solid #eff4f7;
     -moz-outline-radius: 3px;

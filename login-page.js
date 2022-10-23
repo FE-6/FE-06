@@ -1,7 +1,11 @@
-let baseURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
+
+let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/api/fe6/login'
 
 const emailElement = document.querySelector('#exampleInputEmail1')
 const passwordElement = document.querySelector('#exampleInputPassword1')
+const buttonLogin = document.getElementById('button')
+
+
 
 let login = async (email, password) => {
     
@@ -21,7 +25,9 @@ let login = async (email, password) => {
             localStorage.setItem("id", user.id)
             localStorage.setItem("full_name", user.full_name)
             // headerElement.innerHTML = "Login Success"
-            window.location.href = "dashboard-page.html"
+
+            window.location.href = "tambahberita.html"
+
         } else {
             headerElement.innerHTML = "Wrong Password"
         }
