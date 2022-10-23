@@ -1,9 +1,9 @@
 const baseURL='https://6353739ca9f3f34c3752aeb7.mockapi.io/home/'
 //home?sortBy=author&order=asc articles?sortBy=author&order=asc
-let main=document.getElementById('articles-container')
+let articleContent=document.getElementById('articles-container')
 
 let getArticle = async () => {
-    let response = await fetch(baseURL + 'home?sortBy=id&order=desc', {
+    let response = await fetch(baseURL + 'article?sortBy=id&order=desc', {
         method: 'GET'
     })
 
