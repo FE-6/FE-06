@@ -1,15 +1,15 @@
 
-let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/api/fe6/login'
+let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/'
 
-const emailElement = document.querySelector('#exampleInputEmail1')
-const passwordElement = document.querySelector('#exampleInputPassword1')
+const emailElement = document.querySelector('#exampleInputEmail')
+const passwordElement = document.querySelector('#exampleInputPassword')
 const buttonLogin = document.getElementById('button')
 
 
 
 let login = async (email, password) => {
     
-    let response = await fetch(baseURL + 'users', {
+    let response = await fetch(baseURL + 'login', {
         method: 'GET'
     })
 
