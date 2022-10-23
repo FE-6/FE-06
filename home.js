@@ -1,51 +1,43 @@
-const API_KEY='f25bcc9af2de4b2d8c1733c730470b64';
-const HEADLINES_NEWS= 'https://newsapi.org/v2/top-headlines?country=id&apiKey=f25bcc9af2de4b2d8c1733c730470b64';
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=id&category=technology&pageSize=8&apiKey=f25bcc9af2de4b2d8c1733c730470b6";
-const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=f25bcc9af2de4b2d8c1733c730470b64";
-const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
+const baseURL='https://6353739ca9f3f34c3752aeb7.mockapi.io/home/'
+//home?sortBy=author&order=asc articles?sortBy=author&order=asc
+let main=document.getElementById('articles-container')
 
-// const main = document.getElementById('main');
-// const form = document.getElementById('form');
-// const search = document.getElementById('search');
+let getArticle = async () => {
+    let response = await fetch(baseURL + 'home?sortBy=id&order=desc', {
+        method: 'GET'
+    })
 
-// getNews(HEADLINES_NEWS);
+    if (!response.ok) {
+        throw new Error("HTTP error " + response.status);
+    }
 
-// function getNews(url) {
-//     fetch(url).then(res => res.json()).then(data => {
-//       console.log(data.results);
-//       showNews(data.results);
-//     })
-// }
+    let articles = await response.json()
 
-// function showNews(data) {
-//   main.innerHTML = '';
+    articlesContainer.innerHTML= ''
 
-//   data.forEach(news => {
-//      const {title, urlToImage, description} = news;
-//      const newsEl = document.createElement('div');
-//      newsEl.classList.add('news');
-//      newsEl.innerHTML = `
-//           <img src="${urlToImage}" alt="${title}">
+    articles.forEach(article => {
 
-//           <div class="card-body">
-//               <h5>${title}</h5>
-//               <p class="${description}"></span>
-//           </div>
-//    `
+        let articleContent = article.content
 
-//  main.appendChild(newsEl);
-//  })
-// }
+        let articleContentShort = articleContent.substr(0, articleContent.indexOf('.'))
 
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault();
+        let articleElement = document.createElement('div')
+        
+        articleElement.className = 'm-5 card m-5 card-group card-img-top'
 
-//   const searchTerm = search.value;
+        articleElement.innerHTML = `
+        <div class="card">
+        <img src="${gmbr.jpeg}" class="card-img-top">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">${article.title}</h5>
+            <p class="card-text">${articleContentShort}</p>
+            <a  href="detail-page.html" onclick="localStorage.setItem('articleId', ${article.id})">Detail</a>
+            </div>
+        `
 
-//   if(searchTerm) {
-//     getNews(SEARCH_NEWS+'&query='+searchTerm)
-//   }else{
-//     getMovies(HEADLINES_NEWS);
-//   }
+        articlesContainer.append(articleElement)
+    });
+}
 
-// })
+getArticle()
