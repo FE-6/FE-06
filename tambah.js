@@ -1,4 +1,4 @@
-const baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/api/fe6/article'
+const baseURL='https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/article'
 
 const imgbbKey = 'f510415e60d0b3b7c6bfb209f3e2cde7'
 const userId = localStorage.getItem('id')
@@ -26,7 +26,7 @@ let postDataNews = async () => {
 
     const imageValue = imgbb['data'].display_url
 
-    await fetch(baseURL + 'articles', {
+    await fetch(baseURL + 'article', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
