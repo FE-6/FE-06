@@ -12,8 +12,6 @@ const adddButtonElement = document.getElementById('add-button')
 let now = new Date().toISOString()
 let formData = new FormData()
 
-// let now = new Date().toISOString().slice(0, 10) Output : yyyy-mm-dd
-
 let postDataNews = async () => {
     formData.append("key", imgbbKey)
     formData.append("image", imageElement.files[0])
