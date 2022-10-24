@@ -1,10 +1,16 @@
+let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/'
 
+<<<<<<< HEAD
 let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/'
 
 const emailElement = document.querySelector('#exampleInputEmail')
 const passwordElement = document.querySelector('#exampleInputPassword')
+=======
+const emailElement = document.querySelector('#exampleInputEmail')
+const passwordElement = document.querySelector('#exampleInputPassword')
+const headerElement = document.getElementById('notif')
+>>>>>>> 6f0b7b35dbe77a1afbe62206fc99f99d61c967b5
 const buttonLogin = document.getElementById('button')
-
 
 
 let login = async (email, password) => {

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 let baseURL = "https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/"
+=======
+let baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/'
+
+>>>>>>> 6f0b7b35dbe77a1afbe62206fc99f99d61c967b5
 
 let nama_element = document.querySelector('#nama_lengkap')
 let email_element = document.querySelector('#email')
@@ -12,7 +17,11 @@ let postDataElement = async () => {
     const email_value = email_element.value
     const password_value = password_element.value
 
+<<<<<<< HEAD
     await fetch(baseURL + 'users', {
+=======
+    await fetch(baseURL + 'login', {
+>>>>>>> 6f0b7b35dbe77a1afbe62206fc99f99d61c967b5
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

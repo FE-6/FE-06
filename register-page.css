@@ -1,7 +1,11 @@
 body {
     font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
     color: #404040;
+<<<<<<< HEAD
     background: #121a88;
+=======
+    background: #2218b2;
+>>>>>>> 6f0b7b35dbe77a1afbe62206fc99f99d61c967b5
     justify-content: center;
     margin-top: 200px;
   }
