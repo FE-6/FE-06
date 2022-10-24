@@ -23,10 +23,10 @@ let getArticle = async () => {
 
         let articleElement = document.createElement('div')
         
-        articleElement.className = 'm-2 card-group'
+        articleElement.className = 'm-2 card-group justify-content-center'
 
         articleElement.innerHTML = `
-        <div class="m-2 card" style="width: 18rem;">
+        <div class="m-2 card" style="width: 18rem; justify-content-center">
             <img src="${article.image}" class="card-img-top" style="width: 100%;" alt="">
                 <div class="card-body">
                     <h5 class="card-title">${article.title}</h5>

@@ -30,10 +30,10 @@ let getArticle = async () => {
 
     articleElement.innerHTML = `
     <divclass="berita-body container mx-5 mt-4">
-        <h1 class="berita-judul col-sm-9 p-3">${article.title}</h1>
-        <h6 class="berita-nama col-sm-9 p-3">${userName}</h6>
-        <p>${createdAt.toDateString()}</p>
-        <img src="${article.image}" alt="">
+        <h1 class="col-sm-9 p-3">${article.title}</h1>
+        <h6 class="col-sm-9 p-3">${article.name}</h6>
+        <p class="col-7 p-3">${createdAt.toDateString()}</p>
+        <img  class="col-7 p-3" src="${article.image}" alt="" >
         <p class="berita-isi col-sm-9 p-3" style="text-align: justify;" >${article.content}</p>
     </div>
     `
