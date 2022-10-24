@@ -1,10 +1,10 @@
 const baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/article'
 
+
 const imgbbKey = 'c8e166e96143c923de73ab3fc70484fc'
 const userId = localStorage.getItem('id')
 
 const titleElement = document.querySelector('#title')
-const nameElement = document.querySelector('#name')
 const contentElement = document.querySelector('#content')
 const imageElement = document.querySelector('#image')
 const adddButtonElement = document.getElementById('add-button')
