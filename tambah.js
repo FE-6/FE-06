@@ -1,6 +1,7 @@
-const baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/api/fe6/home'
+const baseURL = 'https://6353739ca9f3f34c3752aeb7.mockapi.io/ayf/article'
 
-const imgbbKey = 'f510415e60d0b3b7c6bfb209f3e2cde7'
+
+const imgbbKey = 'c8e166e96143c923de73ab3fc70484fc'
 const userId = localStorage.getItem('id')
 
 const titleElement = document.querySelector('#title')
@@ -10,8 +11,6 @@ const adddButtonElement = document.getElementById('add-button')
 
 let now = new Date().toISOString()
 let formData = new FormData()
-
-// let now = new Date().toISOString().slice(0, 10) Output : yyyy-mm-dd
 
 let postDataNews = async () => {
     formData.append("key", imgbbKey)
@@ -33,6 +32,7 @@ let postDataNews = async () => {
         },
         body: JSON.stringify({
             title: titleElement.value,
+            name: nameElement.value,
             content: contentElement.value,
             image: imageValue,
             createdAt: now,
