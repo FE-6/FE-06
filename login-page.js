@@ -25,7 +25,7 @@ let login = async (email, password) => {
             localStorage.setItem("full_name", user.full_name)
             // headerElement.innerHTML = "Login Success"
 
-            window.location.href = "tambahberita.html"
+            window.location.href = "dashboard.html"
 
         } else {
             headerElement.innerHTML = "Wrong Password"
