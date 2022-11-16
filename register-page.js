@@ -12,13 +12,13 @@ let postDataElement = async () => {
     const email_value = email_element.value
     const password_value = password_element.value
 
-    await fetch(baseURL + 'login', {
+    await fetch(baseURL + 'users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            full_name: name_value,
+            name: name_value,
             email: email_value,
             password : password_value,
         })

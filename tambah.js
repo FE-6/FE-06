@@ -40,7 +40,7 @@ let postDataNews = async () => {
         })
     })
 
-    window.location.href = 'dashboard.html'
+    window.location.href = 'home.html'
 }
 
 adddButtonElement.addEventListener('click', (event) => {
