@@ -13,17 +13,17 @@ let now = new Date().toISOString()
 let formData = new FormData()
 
 let postDataNews = async () => {
-    formData.append("key", imgbbKey)
-    formData.append("image", imageElement.files[0])
+    // formData.append("key", imgbbKey)
+    // formData.append("image", imageElement.files[0])
 
-    let responseImgbb = await fetch("https://api.imgbb.com/1/upload", {
-        method: 'POST',
-        body: formData
-    })
+    // let responseImgbb = await fetch("https://api.imgbb.com/1/upload", {
+    //     method: 'POST',
+    //     body: formData
+    // })
 
-    let imgbb = await responseImgbb.json()
+    // let imgbb = await responseImgbb.json()
 
-    const imageValue = imgbb['data'].display_url
+    // const imageValue = imgbb['data'].display_url
 
     await fetch(baseURL + 'article', {
         method: 'POST',
@@ -34,7 +34,7 @@ let postDataNews = async () => {
             title: titleElement.value,
             name: nameElement.value,
             content: contentElement.value,
-            image: imageValue,
+            // image: imageValue,
             createdAt: now,
             userId: userId,
         })
