@@ -8,7 +8,7 @@ const buttonLogin = document.getElementById('button')
 
 let login = async (email, password) => {
     
-    let response = await fetch(baseURL + 'login', {
+    let response = await fetch(baseURL + 'users', {
         method: 'GET'
     })
 
@@ -22,7 +22,7 @@ let login = async (email, password) => {
     if(user){
         if (user.password === password) {
             localStorage.setItem("id", user.id)
-            localStorage.setItem("full_name", user.full_name)
+            localStorage.setItem("name", user.name)
             // headerElement.innerHTML = "Login Success"
 
             window.location.href = "dashboard.html"
